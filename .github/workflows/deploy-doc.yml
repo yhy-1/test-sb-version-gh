@@ -30,11 +30,10 @@ jobs:
             echo "Version is a beta release. Cancel workflow."
             exit 0
           fi
-      - name: Install dependencies
-        run: |
-          npm i
-          npm run build
-          npm run build-storybook
+      - uses: bahmutov/npm-install@v1
+      - run: npm run build
+      - run: npm run build-storybook
+
       - name: Build and Commit
         uses: sphinx-notes/pages@v2
         with:
