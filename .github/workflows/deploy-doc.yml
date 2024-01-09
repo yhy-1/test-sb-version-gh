@@ -37,7 +37,8 @@ jobs:
       - name: Build and Commit
         uses: sphinx-notes/pages@v2
         with:
-          documentation_path: storybook-static
+          documentation_path: ./storybook-static
+          requirements_path: ./requirements.txt
           target_path: ${{ env.RELEASE_VERSION }}
       - name: Redirect stable to new release
         run: |
