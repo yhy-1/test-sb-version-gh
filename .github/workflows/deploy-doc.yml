@@ -22,7 +22,7 @@ jobs:
       # Set up Node
       - uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: "18"
       - name: Get version set env, exit if beta release
         run: |
           echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
