@@ -40,12 +40,12 @@ jobs:
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.DEPENDABOT_TOKEN }}
           publish_dir: ./storybook-static
           destination_dir: ./latest
       - name: Deploy redirect 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.DEPENDABOT_TOKEN }}
           publish_dir: ./storybook-redirect
           keep_files: true
