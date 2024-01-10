@@ -25,7 +25,7 @@ jobs:
         run: |
           RELEASE_VERSION=${GITHUB_BASE_REF:-${GITHUB_REF#refs/heads/}}
           if [[ "$RELEASE_VERSION" == "main" ]]; then
-            GIT_BRANCH="latest"
+            RELEASE_VERSION="latest"
           fi
           echo "RELEASE_VERSION=$RELEASE_VERSION" >> $GITHUB_ENV
       - uses: bahmutov/npm-install@v1
