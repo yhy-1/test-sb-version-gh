@@ -42,7 +42,7 @@ jobs:
         with:
           github_token: ${{ secrets.DEPENDABOT_TOKEN }}
           publish_dir: ./storybook-static
-          destination_dir: ./latest
+          destination_dir: ./22.x
       - name: Deploy redirect 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
